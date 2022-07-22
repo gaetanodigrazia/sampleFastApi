@@ -1,0 +1,12 @@
+version: '3'
+services:
+  fastApiServer:
+    container_name: fastApiServer
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    volumes:
+      - ./files:/files
+    ports:
+      - "80:80"
